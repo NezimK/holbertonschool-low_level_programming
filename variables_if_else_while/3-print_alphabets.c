@@ -10,12 +10,13 @@ int main(void)
 	char alphabet;
 
 	for (alphabet = 'a'; alphabet <= 'z' ; alphabet++)
+	{
+		printf("%c ", alphabet);
+	}
 	for (alphabet = 'A'; alphabet <= 'Z' ; alphabet++)
 	{
-		putchar(alphabet);
+		printf("%c ", alphabet);
 	}
-
-	putchar('\n');
 
 	return (0);
 }
