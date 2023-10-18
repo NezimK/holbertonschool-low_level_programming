@@ -2,12 +2,11 @@
 
 /**
  * main - write a function thats prints the alphabet, in lowercase
- * Rteurn: Always 0.
+ * Return: Always 0.
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 
-int main(void)
 {
 	char alphabet;
 
@@ -17,5 +16,4 @@ int main(void)
 	}
 
 	_putchar('\n');
-	return (0);
 }
