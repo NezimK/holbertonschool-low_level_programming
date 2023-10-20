@@ -2,12 +2,13 @@
 #include "main.h"
 
 /**
- * int _abs - computes the absolute value of an integer
- * @c : check
+ * _abs - computes the absolute value of an integer
+ * @a : Number
  * Return: Value of an integer
  */
 
 int _abs(int a)
+
 {
 	if (a < 0)
 	{
