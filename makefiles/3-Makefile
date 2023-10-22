@@ -25,5 +25,3 @@ fclean:
 	$(RM) -rf *.o
 
 re:
-	@touch *.o
-	@make
