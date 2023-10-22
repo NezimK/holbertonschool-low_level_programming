@@ -25,5 +25,4 @@ fclean:
 	$(RM) -rf *.o
 
 re:
-	$(RM) *.so
-	$(RM) *.o
+	touch 3-Makefile
