@@ -15,14 +15,15 @@ $(NAME): $(OBJ)
 	$(CC) -o $@ $^
 
 clean:
-	$(RM) -rf *~ school
+	$(RM) -rf *~ $(NAME)
 
 oclean:
 	$(RM) -rf *.o
 
 fclean: 
-	$(RM) -rf *~ school
+	$(RM) -rf *~ $(NAME)
 	$(RM) -rf *.o
 
 re:
-	rm -f *.o
+	$(RM) *.so
+	$(RM) *.o
