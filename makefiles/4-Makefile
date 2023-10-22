@@ -1,0 +1,28 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+all: $(NAME)
+
+%.o: %.c
+	        $(CC) $(CFLAGS) -o $@ -c $<
+
+$(NAME): $(OBJ)
+	        $(CC) $(CFLAGS) -o $@ $^
+
+clean:
+	        $(RM) -rf *~ $(NAME)
+
+oclean:
+	        $(RM) -rf *.o
+
+fclean:
+	        $(RM) -rf *~ $(NAME)
+		        $(RM) -rf *.o
+
+re:
+	        touch 3-Makefile
+	
