@@ -2,6 +2,9 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
+RM = rm -rf
+
+.PHONY: re
 
 all: $(NAME)
 
@@ -21,3 +24,6 @@ fclean:
 	rm -rf *~
 	rm -rf *.o
 
+re:
+	@touch *.c
+	@make
