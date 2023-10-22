@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - Prin numbers from 0 to 9.
+ * print_numbers - Print numbers from 0 to 9.
  * @c: chiffre
- * Return: 0.
+ * Return: Nothing.
  */
 
-void print_numbers(void)
+void print_numbers(char c)
 {
 	char c;
 
