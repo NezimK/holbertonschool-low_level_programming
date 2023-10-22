@@ -2,7 +2,7 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
-RM = r
+RM = rm
 
 .PHONY: re
 
@@ -15,14 +15,14 @@ $(NAME): $(OBJ)
 	$(CC) -o $@ $^
 
 clean:
-	rm -rf *~
+	$(RM) -rf *~
 
 oclean:
-	rm -rf *.o
+	$(RM) -rf *.o
 
 fclean: 
-	rm -rf *~
-	rm -rf *.o
+	$(RM) -rf *~
+	$(RM) -rf *.o
 
 re:
 	@touch *.c
