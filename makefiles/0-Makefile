@@ -1,8 +1,8 @@
 all: main school
 
 main:
-	touch main.c
+	cc main.c -o main
 school:
-	touch school.c
+	cc school.c -o school
 
 clean: rm -f main school
