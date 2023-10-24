@@ -6,7 +6,7 @@
  * @str: String.
  * Return: 0
  */
-i
+
 void puts2(char *str)
 {
 	int i;
