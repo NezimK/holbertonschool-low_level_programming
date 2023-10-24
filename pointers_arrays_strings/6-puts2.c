@@ -6,7 +6,7 @@
  * @str: String.
  * Return: 0
  */
-
+i
 void puts2(char *str)
 {
 	int i;
@@ -16,7 +16,7 @@ void puts2(char *str)
 	{
 	a++;
 	}
-	for (; i < a; i += 2)
+	for (i = 0; i < a; i += 2)
 	{
 		_putchar(str[i]);
 	}
