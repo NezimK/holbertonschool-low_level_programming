@@ -7,7 +7,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 
-int op_sub(inta, int b)
+int op_sub(int a, int b)
 {
 	return (a - b);
 }
