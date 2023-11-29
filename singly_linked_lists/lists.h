@@ -18,4 +18,8 @@ typedef struct list_s
 
 size_t print_list(const list_t *h);
 
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
 #endif
