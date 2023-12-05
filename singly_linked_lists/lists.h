@@ -1,6 +1,5 @@
 #ifndef _LISTS_H_
 #define _LISTS_H_
-
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
@@ -9,7 +8,6 @@
  *
  * Description: singly linked list node structure
  */
-
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
