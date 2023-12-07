@@ -8,42 +8,42 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters) 
 {
-    FILE *file;
-    char *buffer;
-    ssize_t bytesRead, bytesWritten;
+    int file_desc;
+	ssize_t read_count, write_count;
+	char *content;
 
-    if (filename == NULL) {
-        return 0;
-    }
+	if (filename == NULL)
+		return (0);
 
-    file = fopen(filename, "r");
+	file_desc = open(filename, O_RDONLY);
+	if (file_desc == -1)
+		return (0);
 
-    if (file == NULL) {
-        return 0;
-    }
+	content = malloc(sizeof(char) * letters);
+	if (content == NULL)
+	{
+		close(file_desc);
+		return (0);
+	}
 
-    buffer = (char *)malloc((letters + 1) * sizeof(char));
-    if (buffer == NULL) {
-        fclose(file);
-        return 0;
-    }
+	read_count = read(file_desc, content, letters);
+	if (read_count == -1)
+	{
+		free(content);
+		close(file_desc);
+		return (0);
+	}
 
-    bytesRead = fread(buffer, sizeof(char), letters, file);
+	write_count = write(STDOUT_FILENO, content, read_count);
+	if (write_count == -1 || write_count != read_count)
+	{
+		free(content);
+		close(file_desc);
+		return (0);
+	}
 
-    fclose(file);
+	free(content);
+	close(file_desc);
 
-    if ((size_t)bytesRead != letters) {
-        free(buffer);
-        return 0;
-    }
-
-    bytesWritten = fwrite(buffer, sizeof(char), bytesRead, stdout);
-
-    free(buffer);
-
-    if (bytesWritten != bytesRead) {
-        return 0;
-    }
-
-    return bytesRead;
+	return (write_count);
 }
