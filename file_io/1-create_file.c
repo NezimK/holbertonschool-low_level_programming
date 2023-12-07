@@ -2,7 +2,7 @@
 
 /**
  * create_file - function that create a file.
- * @filename: name of file created
+ * @filename: name of file created.
  * @text_content: content of a text
  * Return: text.
 */
