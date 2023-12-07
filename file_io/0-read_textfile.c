@@ -3,12 +3,12 @@
 /**
  * read_textfile - read a file text
  * @filename:  name of file text
- * @letters: number of letters read 
+ * @letters: number of letters read
  * Reurn: number of letters.
  */
-ssize_t read_textfile(const char *filename, size_t letters) 
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int file_desc;
+	int file_desc;
 	ssize_t read_count, write_count;
 	char *content;
 
